@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tarea1</string>
+    <string-array name="spinner">
+        <item>Bachillerato</item>
+        <item>Técnico</item>
+        <item>Licenciatura</item>
+        <item>Maestría</item>
+        <item>Doctorado</item>
+    </string-array>
+    <string-array name="auto_text_view">
+        <item>Aventuras de Sherlock Holmes, Sherlock</item>
+        <item>The Secret, Rhonda Byrne</item>
+        <item>Cuentos variados, Hermanos Grimm</item>
+        <item>El hombre invisble, H. G. Wells</item>
+        <item>El caballero de la armadura oxidada, Robert Fisher</item>
+    </string-array>
+</resources>
