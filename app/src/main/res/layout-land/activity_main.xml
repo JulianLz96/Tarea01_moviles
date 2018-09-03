@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ActivityMain"
-    android:gravity="left">
+    >
 
    <EditText
        android:id="@+id/edit_text_nombre"
@@ -33,6 +37,7 @@
         />
 
     <Spinner
+        android:id="@+id/spinner_escolaridad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/spinner"
@@ -48,10 +53,12 @@
         />
 
     <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioButton
+            android:id="@+id/radio_button_fem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Femenino"
@@ -59,6 +66,7 @@
             android:layout_marginLeft="@dimen/margin_spinner_item"
             />
         <RadioButton
+            android:id="@+id/radio_button_masc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Masculino"
@@ -75,13 +83,15 @@
         />
 
     <AutoCompleteTextView
+        android:id="@+id/auto_comp_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:completionHint="@string/app_name"
+        android:completionThreshold="1"
         android:layout_marginLeft="@dimen/margin"
         />
 
     <CheckBox
+        android:id="@+id/checkbox_deporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Practica Deporte"
@@ -89,12 +99,14 @@
         android:layout_marginLeft="@dimen/margin"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
         android:gravity="center|bottom"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+
+        >
 
         <Button
             android:id="@+id/limpiar"
@@ -105,7 +117,7 @@
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            
             />
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
+</ScrollView>
