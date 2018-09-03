@@ -14,7 +14,7 @@ public class Alumno {
     private Boolean lib;
 
     public Alumno(String nombrec, String telefonoc, String escolaridadc,
-                  int generoc, String  libroc, Boolean deportec){
+                  String generoc, String  libroc, Boolean deportec){
         setNombre(nombrec);
         setTelefono(telefonoc);
         setEscolaridad(escolaridadc);
@@ -52,11 +52,8 @@ public class Alumno {
         return genero;
     }
 
-    public void setGenero(int generof) {
-        if(generof == 0)
-            this.genero = "Femenino";
-        else
-            this.genero = "Masculino";
+    public void setGenero(String  generof) {
+            this.genero = generof;
     }
 
     public String getLibro() {

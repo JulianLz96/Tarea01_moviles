@@ -14,6 +14,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class ActivityMain extends AppCompatActivity {
     Spinner escolaridad;
     CheckBox deporte;
     RadioGroup radioGroup;
+    RadioButton radioButton;
 
     public static String[] libros = {"Aventuras de Sherlock Holmes, Sherlock",
         "The Secret, Rhonda Byrne", "Cuentos variados, Hermanos Grimm",
@@ -66,9 +68,10 @@ public class ActivityMain extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.activity_main_menu_save:
+                radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
                 Alumno alumnos = new Alumno(nombre.getText().toString(),
                         telefono.getText().toString(), escolaridad.getSelectedItem().toString(),
-                        radioGroup.getCheckedRadioButtonId(), libfav.getText().toString(), deporte.isChecked());
+                        radioButton.getText().toString(), libfav.getText().toString(), deporte.isChecked());
                 Toast alu = Toast.makeText(ActivityMain.this,
                         alumnos.toString(),Toast.LENGTH_LONG );
                 alu.setGravity(Gravity.BOTTOM | Gravity.CENTER, 0,0);
@@ -86,6 +89,8 @@ public class ActivityMain extends AppCompatActivity {
         escolaridad.setSelection(1);
         libfav.getText().clear();
         deporte.setChecked(true);
+        ((RadioButton)radioGroup.getChildAt(0)).setChecked(true);
+        escolaridad.setSelection(0);
     }
 
     protected void fill_componentes(){
