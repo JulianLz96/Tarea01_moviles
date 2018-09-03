@@ -89,7 +89,7 @@ public class Alumno {
                 + "\nTelefono: " + getTelefono()
                 + "\nEscolaridad: " + getEscolaridad()
                 + "\nGénero: " + getGenero()
-                + "\nLibro Fávorito: " + getLibro()
+                + "\nLibro Favorito: " + getLibro()
                 + "\nPractica Deporte: " + getDeporte();
         else
             return "Nombre: " + getNombre()

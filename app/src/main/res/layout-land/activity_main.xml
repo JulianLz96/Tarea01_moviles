@@ -9,14 +9,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityMain"
-    >
+    tools:context=".ActivityMain">
 
    <EditText
        android:id="@+id/edit_text_nombre"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:hint="Ingrese su nombre"
+       android:hint="@string/nombre"
        android:paddingLeft="@dimen/margin"
        />
 
@@ -24,14 +23,14 @@
         android:id="@+id/edit_text_telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su télefono"
+        android:hint="@string/telefono"
         android:paddingLeft="@dimen/margin"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolaridad"
+        android:text="@string/escolaridad"
         android:textColor="#000000"
         android:paddingLeft="@dimen/margin"
         />
@@ -40,14 +39,14 @@
         android:id="@+id/spinner_escolaridad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/spinner"
         android:layout_marginLeft="@dimen/margin"
+        android:entries="@array/spinner"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Género"
+        android:text="@string/genero"
         android:textColor="#000000"
         android:layout_marginLeft="@dimen/margin"
         />
@@ -61,7 +60,7 @@
             android:id="@+id/radio_button_fem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Femenino"
+            android:text="@string/femenino"
             android:checked="true"
             android:layout_marginLeft="@dimen/margin_spinner_item"
             />
@@ -69,7 +68,7 @@
             android:id="@+id/radio_button_masc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masculino"
+            android:text="@string/masculino"
             android:paddingLeft="@dimen/margin_spinner_item"
             />
     </RadioGroup>
@@ -77,7 +76,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Libro Favorito"
+        android:text="@string/libros_favoritos"
         android:textColor="#000000"
         android:paddingLeft="@dimen/margin"
         />
@@ -94,30 +93,28 @@
         android:id="@+id/checkbox_deporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Practica Deporte"
+        android:text="@string/practica_deporte"
         android:checked="true"
         android:layout_marginLeft="@dimen/margin"
         />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
         android:gravity="center|bottom"
-        android:orientation="vertical"
-
-        >
+        android:orientation="vertical" >
 
         <Button
             android:id="@+id/limpiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
-            android:text="Limpiar"
+            android:text="@string/limpiar"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             />
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
 </ScrollView>
